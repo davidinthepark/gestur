@@ -15,6 +15,7 @@
 		52C6EA7A1FA82B730001E729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA781FA82B730001E729 /* LaunchScreen.storyboard */; };
 		52C6EA821FA833FC0001E729 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA811FA833FB0001E729 /* SignIn.swift */; };
 		52C6EA841FA842560001E729 /* GESTUR.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA831FA842560001E729 /* GESTUR.png */; };
+		FFBA1E621FA8CDC7007CA6B3 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		52C6EA7B1FA82B730001E729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C6EA811FA833FB0001E729 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		52C6EA831FA842560001E729 /* GESTUR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GESTUR.png; sourceTree = "<group>"; };
+		FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				52C6EA6C1FA82B730001E729 /* AppDelegate.swift */,
 				52C6EA6E1FA82B730001E729 /* ViewController.swift */,
 				52C6EA701FA82B730001E729 /* Main.storyboard */,
+				FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */,
 				52C6EA761FA82B730001E729 /* Assets.xcassets */,
 				52C6EA781FA82B730001E729 /* LaunchScreen.storyboard */,
 				52C6EA7B1FA82B730001E729 /* Info.plist */,
@@ -105,7 +108,7 @@
 				TargetAttributes = {
 					52C6EA681FA82B730001E729 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = JJ9S6U4NC3;
+						DevelopmentTeam = ZZ698KZ5HN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,6 +140,7 @@
 				52C6EA771FA82B730001E729 /* Assets.xcassets in Resources */,
 				52C6EA721FA82B730001E729 /* Main.storyboard in Resources */,
 				52C6EA841FA842560001E729 /* GESTUR.png in Resources */,
+				FFBA1E621FA8CDC7007CA6B3 /* camera.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +279,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JJ9S6U4NC3;
+				DEVELOPMENT_TEAM = ZZ698KZ5HN;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tksun.Gestur;
+				PRODUCT_BUNDLE_IDENTIFIER = gestur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -288,10 +292,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JJ9S6U4NC3;
+				DEVELOPMENT_TEAM = ZZ698KZ5HN;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tksun.Gestur;
+				PRODUCT_BUNDLE_IDENTIFIER = gestur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
