@@ -1,25 +1,24 @@
 //
-//  ViewController.swift
+//  Login.swift
 //  Gestur
 //
-//  Created by tk on 31/10/2017.
+//  Created by tk on 08/11/2017.
 //  Copyright © 2017 tk. All rights reserved.
 //
-
 import UIKit
-
-class mainController: UIViewController {
-
+import Foundation
+class logInController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("login page loaded")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-

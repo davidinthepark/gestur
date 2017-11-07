@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="mainController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -79,12 +79,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186.40000000000001" y="435.83208395802103"/>
+            <point key="canvasLocation" x="-185" y="431"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Controller-->
         <scene sceneID="Hb2-Jy-gYf">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="DOU-E5-G6L" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="DOU-E5-G6L" customClass="signUpController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S6B-6s-Ush"/>
                         <viewControllerLayoutGuide type="bottom" id="PUO-AF-rkt"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="1032.8" y="811.84407796101959"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In Controller-->
         <scene sceneID="l2q-4S-QOb">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="2MN-u4-J4W" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="2MN-u4-J4W" customClass="logInController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oAE-t1-RPy"/>
                         <viewControllerLayoutGuide type="bottom" id="GUl-gj-bMG"/>
@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="1032.8" y="101.19940029985008"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera Controller-->
         <scene sceneID="OYF-wv-oLA">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="DTy-Ck-2ez" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="DTy-Ck-2ez" customClass="cameraController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b4D-MY-sZh"/>
                         <viewControllerLayoutGuide type="bottom" id="eiy-OO-Heo"/>
@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="2036" y="481.70914542728639"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Controller-->
         <scene sceneID="B7e-1b-p07">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="CV6-DA-Frt" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="CV6-DA-Frt" customClass="detailController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eNW-FG-SA6"/>
                         <viewControllerLayoutGuide type="bottom" id="6HI-fX-SxK"/>
@@ -298,7 +298,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-Zz-0RH">
                                         <rect key="frame" x="0.0" y="0.0" width="376" height="109"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -347,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPB-du-s78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="475"/>
+            <point key="canvasLocation" x="3202" y="470"/>
         </scene>
     </scenes>
     <resources>
@@ -355,7 +355,7 @@
         <image name="camera.jpg" width="736" height="1104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FPF-qt-KR6"/>
         <segue reference="gTQ-fk-Uhd"/>
+        <segue reference="FPF-qt-KR6"/>
     </inferredMetricsTieBreakers>
 </document>

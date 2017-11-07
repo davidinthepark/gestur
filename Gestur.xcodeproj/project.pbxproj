@@ -13,8 +13,11 @@
 		52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA731FA82B730001E729 /* Gestur.xcdatamodeld */; };
 		52C6EA771FA82B730001E729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA761FA82B730001E729 /* Assets.xcassets */; };
 		52C6EA7A1FA82B730001E729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA781FA82B730001E729 /* LaunchScreen.storyboard */; };
-		52C6EA821FA833FC0001E729 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA811FA833FB0001E729 /* SignIn.swift */; };
 		52C6EA841FA842560001E729 /* GESTUR.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA831FA842560001E729 /* GESTUR.png */; };
+		52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA891FB232A30001E729 /* logIn.swift */; };
+		52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8B1FB232B10001E729 /* signUp.swift */; };
+		52C6EA8E1FB232E80001E729 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8D1FB232E80001E729 /* camera.swift */; };
+		52C6EA901FB232F90001E729 /* detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8F1FB232F90001E729 /* detail.swift */; };
 		FFBA1E621FA8CDC7007CA6B3 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +30,11 @@
 		52C6EA761FA82B730001E729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C6EA791FA82B730001E729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C6EA7B1FA82B730001E729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52C6EA811FA833FB0001E729 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		52C6EA831FA842560001E729 /* GESTUR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GESTUR.png; sourceTree = "<group>"; };
+		52C6EA891FB232A30001E729 /* logIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logIn.swift; sourceTree = "<group>"; };
+		52C6EA8B1FB232B10001E729 /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
+		52C6EA8D1FB232E80001E729 /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
+		52C6EA8F1FB232F90001E729 /* detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detail.swift; sourceTree = "<group>"; };
 		FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +77,10 @@
 				52C6EA781FA82B730001E729 /* LaunchScreen.storyboard */,
 				52C6EA7B1FA82B730001E729 /* Info.plist */,
 				52C6EA731FA82B730001E729 /* Gestur.xcdatamodeld */,
-				52C6EA811FA833FB0001E729 /* SignIn.swift */,
+				52C6EA891FB232A30001E729 /* logIn.swift */,
+				52C6EA8B1FB232B10001E729 /* signUp.swift */,
+				52C6EA8D1FB232E80001E729 /* camera.swift */,
+				52C6EA8F1FB232F90001E729 /* detail.swift */,
 			);
 			path = Gestur;
 			sourceTree = "<group>";
@@ -151,10 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C6EA821FA833FC0001E729 /* SignIn.swift in Sources */,
+				52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
+				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
 				52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */,
+				52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */,
+				52C6EA8E1FB232E80001E729 /* camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
