@@ -18,6 +18,9 @@
 		52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8B1FB232B10001E729 /* signUp.swift */; };
 		52C6EA8E1FB232E80001E729 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8D1FB232E80001E729 /* camera.swift */; };
 		52C6EA901FB232F90001E729 /* detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8F1FB232F90001E729 /* detail.swift */; };
+		52C6EA9E1FB29EC80001E729 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EA9D1FB29EC80001E729 /* AVFoundation.framework */; };
+		52C6EAA01FB29ED00001E729 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EA9F1FB29ED00001E729 /* UIKit.framework */; };
+		52C6EAA21FB29EEB0001E729 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EAA11FB29EEB0001E729 /* Foundation.framework */; };
 		FFBA1E621FA8CDC7007CA6B3 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		52C6EA8B1FB232B10001E729 /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		52C6EA8D1FB232E80001E729 /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
 		52C6EA8F1FB232F90001E729 /* detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detail.swift; sourceTree = "<group>"; };
+		52C6EA9D1FB29EC80001E729 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		52C6EA9F1FB29ED00001E729 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		52C6EAA11FB29EEB0001E729 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C6EAA21FB29EEB0001E729 /* Foundation.framework in Frameworks */,
+				52C6EAA01FB29ED00001E729 /* UIKit.framework in Frameworks */,
+				52C6EA9E1FB29EC80001E729 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			children = (
 				52C6EA6B1FA82B730001E729 /* Gestur */,
 				52C6EA6A1FA82B730001E729 /* Products */,
+				52C6EA9C1FB29EC80001E729 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +93,16 @@
 				52C6EA8F1FB232F90001E729 /* detail.swift */,
 			);
 			path = Gestur;
+			sourceTree = "<group>";
+		};
+		52C6EA9C1FB29EC80001E729 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52C6EAA11FB29EEB0001E729 /* Foundation.framework */,
+				52C6EA9F1FB29ED00001E729 /* UIKit.framework */,
+				52C6EA9D1FB29EC80001E729 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +137,7 @@
 				TargetAttributes = {
 					52C6EA681FA82B730001E729 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = ZZ698KZ5HN;
+						DevelopmentTeam = JJ9S6U4NC3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -291,11 +311,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ698KZ5HN;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JJ9S6U4NC3;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gestur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -304,11 +326,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZZ698KZ5HN;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JJ9S6U4NC3;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gestur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
