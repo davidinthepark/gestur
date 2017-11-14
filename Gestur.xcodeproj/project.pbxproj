@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5285F8911FBB7FC00024241B /* cameraML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285F8901FBB7FC00024241B /* cameraML.swift */; };
+		5285F8931FBB939A0024241B /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5285F8921FBB939A0024241B /* SqueezeNet.mlmodel */; };
 		52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA6C1FA82B730001E729 /* AppDelegate.swift */; };
 		52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA6E1FA82B730001E729 /* ViewController.swift */; };
 		52C6EA721FA82B730001E729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA701FA82B730001E729 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5285F8901FBB7FC00024241B /* cameraML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraML.swift; sourceTree = "<group>"; };
+		5285F8921FBB939A0024241B /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		52C6EA691FA82B730001E729 /* Gestur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C6EA6C1FA82B730001E729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52C6EA6E1FA82B730001E729 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +82,11 @@
 		52C6EA6B1FA82B730001E729 /* Gestur */ = {
 			isa = PBXGroup;
 			children = (
+				5285F8921FBB939A0024241B /* SqueezeNet.mlmodel */,
 				52C6EA831FA842560001E729 /* GESTUR.png */,
 				52C6EA6C1FA82B730001E729 /* AppDelegate.swift */,
 				52C6EA6E1FA82B730001E729 /* ViewController.swift */,
+				5285F8901FBB7FC00024241B /* cameraML.swift */,
 				52C6EA701FA82B730001E729 /* Main.storyboard */,
 				FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */,
 				52C6EA761FA82B730001E729 /* Assets.xcassets */,
@@ -181,8 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */,
+				5285F8931FBB939A0024241B /* SqueezeNet.mlmodel in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
 				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
+				5285F8911FBB7FC00024241B /* cameraML.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
 				52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */,
 				52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */,
@@ -253,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -298,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -314,6 +322,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JJ9S6U4NC3;
 				INFOPLIST_FILE = Gestur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gestur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,6 +338,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JJ9S6U4NC3;
 				INFOPLIST_FILE = Gestur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gestur;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import Vision
 
 class cameraController: UIViewController {
     var session: AVCaptureSession?
@@ -56,10 +57,21 @@ class cameraController: UIViewController {
         videoPreviewLayer!.videoGravity = AVLayerVideoGravityResizeAspect
         videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
         previewView.layer.addSublayer(videoPreviewLayer!)
+        previewView.frame = view.frame
         session!.startRunning()
+        
+        let dataOutput = AVCaptureVideoDataOutput()
+        dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label:"videoQueue"))
+        session!.addOutput(dataOutput)
+        
+        
     }
    
-    
+    func captureOutput(_output:AVCaptureOutput, didDrop: CMSampleBuffer, from: AVCaptureConnection){
+        print("Camera was able to capture a frame: *", Date())
+        
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         videoPreviewLayer!.frame = previewView.bounds
