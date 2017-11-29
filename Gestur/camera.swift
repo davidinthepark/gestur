@@ -3,77 +3,157 @@
 //  Gestur
 //
 //  Created by tk on 08/11/2017.
+//  Modified by David on 11/28/2017.
 //  Copyright © 2017 tk. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import AVFoundation
+import SceneKit
+import ARKit
 import Vision
+import QuartzCore
 
-class cameraController: UIViewController {
-    var session: AVCaptureSession?
-    var stillImageOutput: AVCaptureStillImageOutput?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    @IBOutlet weak var previewView: UIView!
+
+class cameraController: UIViewController,ARSCNViewDelegate {
+
+    @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var textOut: UILabel!
+    
+    let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
+    var visionRequests = [VNRequest]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        textOut.layer.backgroundColor  = UIColor.yellow.cgColor
+        textOut.layer.cornerRadius = 8
+        textOut.alpha = 0.7
+        
+        // --- ARKIT ---
+        
+        // Set the view's delegate
+        sceneView.delegate = self
+        
+        // Show statistics such as fps and timing information
+        sceneView.showsStatistics = false
+        
+        // Create a new scene
+        let scene = SCNScene() // SCNScene(named: "art.scnassets/ship.scn")!
+        
+        // Set the scene to the view
+        sceneView.scene = scene
+        
+        // --- ML & VISION ---
+        
+        // Setup Vision Model
+        guard let selectedModel = try? VNCoreMLModel(for: v1().model) else {
+            fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project. Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
+        }
+        
+        // Set up Vision-CoreML Request
+        let classificationRequest = VNCoreMLRequest(model: selectedModel, completionHandler: classificationCompleteHandler)
+        classificationRequest.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop // Crop from centre of images and scale to appropriate size.
+        visionRequests = [classificationRequest]
+        
+        // Begin Loop to Update CoreML
+        loopCoreMLUpdate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        session = AVCaptureSession()
-        session!.sessionPreset = AVCaptureSessionPresetPhoto
-        let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
-        var error: NSError?
-        var input: AVCaptureDeviceInput!
-        do{
-            input = try AVCaptureDeviceInput(device: backCamera)
-        }catch let error1 as NSError{
-            error = error1
-            input = nil
-            print(error!.localizedDescription)
-        }
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
         
-        if error == nil && session!.canAddInput(input){
-            session!.addInput(input)
-            // ..
-            // the remainder of the session setup will go here
-        }
-        
-        if session!.canAddOutput(stillImageOutput){
-            session!.addOutput(stillImageOutput)
-        }
-        
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-        videoPreviewLayer!.videoGravity = AVLayerVideoGravityResizeAspect
-        videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-        previewView.layer.addSublayer(videoPreviewLayer!)
-        previewView.frame = view.frame
-        session!.startRunning()
-        
-        let dataOutput = AVCaptureVideoDataOutput()
-        dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label:"videoQueue"))
-        session!.addOutput(dataOutput)
-        
-        
+        // Run the view's session
+        sceneView.session.run(configuration)
     }
-   
-    func captureOutput(_output:AVCaptureOutput, didDrop: CMSampleBuffer, from: AVCaptureConnection){
-        print("Camera was able to capture a frame: *", Date())
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        
+        // Pause the view's session
+        sceneView.session.pause()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        videoPreviewLayer!.frame = previewView.bounds
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
+    }
+    
+    // MARK: - ARSCNViewDelegate
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        DispatchQueue.main.async {
+            // Do any desired updates to SceneKit here.
+        }
+    }
+    
+    // MARK: - MACHINE LEARNING
+    
+    func loopCoreMLUpdate() {
+        // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
+        dispatchQueueML.async {
+            // 1. Run Update.
+            self.updateCoreML()
+            // 2. Loop this function.
+            self.loopCoreMLUpdate()
+        }
+    }
+    
+    func updateCoreML() {
+        // Get Camera Image as RGB
+        let pixbuff : CVPixelBuffer? = (sceneView.session.currentFrame?.capturedImage)
+        if pixbuff == nil { return }
+        let ciImage = CIImage(cvPixelBuffer: pixbuff!)
+        
+        // Prepare CoreML/Vision Request
+        let imageRequestHandler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        
+        // Run Vision Image Request
+        do {
+            try imageRequestHandler.perform(self.visionRequests)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func classificationCompleteHandler(request: VNRequest, error: Error?) {
+        // Catch Errors
+        if error != nil {
+            print("Error: " + (error?.localizedDescription)!)
+            return
+        }
+        guard let observations = request.results else {
+            print("No results")
+            return
+        }
+        
+        // Get Classifications
+        let classifications = observations[0...2] // top 3 results
+            .flatMap({ $0 as? VNClassificationObservation })
+            .map({ "\($0.identifier) \(String(format:" : %.2f", $0.confidence))" })
+            .joined(separator: "\n")
+        
+        // Render Classifications
+        DispatchQueue.main.async {
+            // Print Classifications
+            // print(classifications)
+            // print("-------------")
+            
+            // Display Top Symbol
+            var symbol = ""
+            let topPrediction = classifications.components(separatedBy: "\n")[0]
+            let topPredictionName = topPrediction.components(separatedBy: ":")[0].trimmingCharacters(in: .whitespaces)
+            // Only display a prediction if confidence is above 1%
+            let topPredictionScore:Float? = Float(topPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
+            if (topPredictionScore != nil && topPredictionScore! > 0.01) {
+                if (topPredictionName == "FIST") { symbol = "FIST" }
+                if (topPredictionName == "PALM") { symbol = "PALM" }
+                if (topPredictionName == "FINGER") { symbol = "FINGER" }
+            }
+            
+            self.textOut.text = symbol
+            
+        }
     }
 }

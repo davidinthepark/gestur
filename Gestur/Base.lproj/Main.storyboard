@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HbT-PH-N7f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -300,24 +300,6 @@
             </objects>
             <point key="canvasLocation" x="1032.8" y="101.19940029985008"/>
         </scene>
-        <!--Camera Ml Controller-->
-        <scene sceneID="9tZ-gB-Jlb">
-            <objects>
-                <viewController id="HbT-PH-N7f" customClass="cameraMlController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sTF-gx-lIW"/>
-                        <viewControllerLayoutGuide type="bottom" id="caE-Vz-oQf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="awC-2U-PZw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IZt-Ja-GSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1765.5999999999999" y="-562.66866566716647"/>
-        </scene>
         <!--Camera Controller-->
         <scene sceneID="OYF-wv-oLA">
             <objects>
@@ -330,75 +312,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UC9-8M-elQ">
-                                <rect key="frame" x="30" y="471" width="315" height="142"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Translated text appears here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SXT-cA-Kia">
-                                        <rect key="frame" x="0.0" y="0.0" width="238" height="142"/>
-                                        <color key="backgroundColor" red="0.85556200487349632" green="0.85419111515964052" blue="0.87813714378238339" alpha="0.85999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-Ew-Ht7">
-                                        <rect key="frame" x="238" y="0.0" width="77" height="142"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2O-6k-ZYw">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="82"/>
-                                                <color key="backgroundColor" red="0.85556200487349632" green="0.85419111515964052" blue="0.87813714378238339" alpha="0.85999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Read"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9a-Q3-5vL">
-                                                <rect key="frame" x="0.0" y="82" width="77" height="30"/>
-                                                <color key="backgroundColor" red="0.85556200487349632" green="0.85419111515964052" blue="0.87813714378238339" alpha="0.76790052816901411" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Sme-3m-zOM"/>
-                                                </constraints>
-                                                <state key="normal" title="Copy"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k59-JR-q2b">
-                                                <rect key="frame" x="0.0" y="112" width="77" height="30"/>
-                                                <color key="backgroundColor" red="0.85556200487349632" green="0.85419111515964052" blue="0.87813714378238339" alpha="0.71343309859154935" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="1Ez-Je-s6k"/>
-                                                </constraints>
-                                                <state key="normal" title="Show More"/>
-                                                <connections>
-                                                    <segue destination="CV6-DA-Frt" kind="presentation" id="ZZX-oK-RQF"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TbX-Wl-0xY">
-                                <rect key="frame" x="25" y="20" width="324" height="443"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="443" id="EpW-BA-dh4"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFw-A3-SLl" customClass="camera">
-                                <rect key="frame" x="25" y="20" width="324" height="443"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urm-eO-0uQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvS-yd-G0i">
+                                <rect key="frame" x="78" y="531" width="219" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="UC9-8M-elQ" firstAttribute="top" secondItem="EFw-A3-SLl" secondAttribute="bottom" constant="8" symbolic="YES" id="64Y-59-6FX"/>
-                            <constraint firstItem="UC9-8M-elQ" firstAttribute="leading" secondItem="4eR-Ai-eD9" secondAttribute="leadingMargin" constant="14" id="DuR-qB-RMG"/>
-                            <constraint firstItem="TbX-Wl-0xY" firstAttribute="trailing" secondItem="EFw-A3-SLl" secondAttribute="trailing" id="FBT-v8-sl8"/>
-                            <constraint firstItem="TbX-Wl-0xY" firstAttribute="leading" secondItem="4eR-Ai-eD9" secondAttribute="leadingMargin" constant="9" id="LjY-nf-dXO"/>
-                            <constraint firstItem="EFw-A3-SLl" firstAttribute="leading" secondItem="TbX-Wl-0xY" secondAttribute="leading" id="Nrf-7T-4bb"/>
-                            <constraint firstItem="EFw-A3-SLl" firstAttribute="top" secondItem="TbX-Wl-0xY" secondAttribute="top" id="ZFW-MC-Hv3"/>
-                            <constraint firstItem="EFw-A3-SLl" firstAttribute="top" secondItem="uBf-f2-DdY" secondAttribute="bottom" id="atC-a7-Mqt"/>
-                            <constraint firstItem="bBr-pF-Iae" firstAttribute="top" secondItem="UC9-8M-elQ" secondAttribute="bottom" constant="54" id="rDh-S2-CQT"/>
-                            <constraint firstItem="EFw-A3-SLl" firstAttribute="centerX" secondItem="4eR-Ai-eD9" secondAttribute="centerX" id="rdF-oT-HPu"/>
-                            <constraint firstItem="EFw-A3-SLl" firstAttribute="centerX" secondItem="UC9-8M-elQ" secondAttribute="centerX" id="xk3-ZC-nxL"/>
-                            <constraint firstItem="UC9-8M-elQ" firstAttribute="top" secondItem="TbX-Wl-0xY" secondAttribute="bottom" constant="8" symbolic="YES" id="yFt-ZZ-gRD"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="previewView" destination="EFw-A3-SLl" id="y58-0V-mCl"/>
+                        <outlet property="sceneView" destination="Urm-eO-0uQ" id="kxO-A5-tfi"/>
+                        <outlet property="textOut" destination="FvS-yd-G0i" id="oE5-au-tZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8x-lQ-muJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -499,7 +429,6 @@
     </scenes>
     <resources>
         <image name="GESTUR.png" width="448" height="181"/>
-        <image name="camera.jpg" width="736" height="1104"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vBe-yw-z2U"/>
