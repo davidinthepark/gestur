@@ -147,9 +147,9 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             // Only display a prediction if confidence is above 1%
             let topPredictionScore:Float? = Float(topPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
             if (topPredictionScore != nil && topPredictionScore! > 0.01) {
-                if (topPredictionName == "FIST") { symbol = "FIST" }
-                if (topPredictionName == "PALM") { symbol = "PALM" }
-                if (topPredictionName == "FINGER") { symbol = "FINGER" }
+                if (topPredictionName == "FIST") { symbol = "Zero" }
+                if (topPredictionName == "PALM") { symbol = "Five" }
+                if (topPredictionName == "FINGER") { symbol = "One" }
             }
             
             self.textOut.text = symbol
