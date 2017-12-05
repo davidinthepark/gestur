@@ -22,7 +22,7 @@
 		52C6EAA21FB29EEB0001E729 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EAA11FB29EEB0001E729 /* Foundation.framework */; };
 		F2DC3F9948CCB781346409C5 /* Pods_Gestur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF4C5E38B25F86EB56DDE /* Pods_Gestur.framework */; };
 		FF2434D21FD0708300D3C431 /* back.Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2434D11FD0708300D3C431 /* back.Main.storyboard */; };
-		FF667E9C1FCFB1F100E98E63 /* v1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF667E9B1FCFB1F100E98E63 /* v1.mlmodel */; };
+		FF7231B21FD71FE300609BC6 /* v1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF7231B11FD71FE300609BC6 /* v1.mlmodel */; };
 		FFBA1E621FA8CDC7007CA6B3 /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */; };
 		FFDB886F1FD06F4300227921 /* Gestur Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FFDB886E1FD06F4300227921 /* Gestur Logo.png */; };
 		FFE65FB81FD071A700D7ECF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE65FB71FD071A700D7ECF5 /* Main.storyboard */; };
@@ -48,7 +48,7 @@
 		A96B30FBEEE8047100744C2D /* Pods-Gestur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.debug.xcconfig"; sourceTree = "<group>"; };
 		F53E324020462821D511EC2F /* Pods-Gestur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.release.xcconfig"; sourceTree = "<group>"; };
 		FF2434D11FD0708300D3C431 /* back.Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = back.Main.storyboard; sourceTree = "<group>"; };
-		FF667E9B1FCFB1F100E98E63 /* v1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v1.mlmodel; sourceTree = "<group>"; };
+		FF7231B11FD71FE300609BC6 /* v1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v1.mlmodel; sourceTree = "<group>"; };
 		FFBA1E611FA8CDC7007CA6B3 /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		FFDB886E1FD06F4300227921 /* Gestur Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestur Logo.png"; sourceTree = "<group>"; };
 		FFE65FB71FD071A700D7ECF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				52C6EA8B1FB232B10001E729 /* signUp.swift */,
 				52C6EA8D1FB232E80001E729 /* camera.swift */,
 				52C6EA8F1FB232F90001E729 /* detail.swift */,
-				FF667E9B1FCFB1F100E98E63 /* v1.mlmodel */,
+				FF7231B11FD71FE300609BC6 /* v1.mlmodel */,
 			);
 			path = Gestur;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */,
-				FF667E9C1FCFB1F100E98E63 /* v1.mlmodel in Sources */,
+				FF7231B21FD71FE300609BC6 /* v1.mlmodel in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
 				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
