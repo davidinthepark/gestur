@@ -21,10 +21,13 @@ class cameraController: UIViewController,ARSCNViewDelegate {
     
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     var visionRequests = [VNRequest]()
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        textOut.layer.backgroundColor  = UIColor.yellow.cgColor
+        let customColor = UIColor(red:51/255, green:140/255, blue:133/255, alpha:1.0)
+        textOut.layer.backgroundColor  = customColor.cgColor
         textOut.layer.cornerRadius = 8
         textOut.alpha = 0.7
         
