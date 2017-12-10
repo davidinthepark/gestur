@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 
 class detailController: UIViewController {
-   
+    
+    var userEmail:String?
+    
+    @IBOutlet var accountEmail: UILabel!
     @IBOutlet var settingTitle: UINavigationBar!
     @IBOutlet var EnglishButton: UIButton!
     @IBOutlet var ChineseButton: UIButton!
@@ -24,6 +27,8 @@ class detailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        accountEmail.text = "Email: " + userEmail!
+    
         EnglishButton.isEnabled = false
         EnglishButton.setTitleColor(UIColor.lightGray, for: .disabled)
         ChineseButton.setTitleColor(UIColor.lightGray, for: .disabled)
@@ -44,6 +49,9 @@ class detailController: UIViewController {
     }
     @IBAction func handleSelection(_ sender: UIButton) {
        handleButtonSelection()
+    }
+    @IBAction func accountClicked(_ sender: UIButton) {
+        accountEmail.isHidden = !accountEmail.isHidden
     }
     
     @IBAction func cameraButtonClicked(_ sender: Any) {

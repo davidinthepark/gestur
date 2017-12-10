@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1090277477598-nev5sl696gmkllgd65mgfgifj3l0358s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1090277477598-nev5sl696gmkllgd65mgfgifj3l0358s</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCIx90ksKHQq4LWiLuNPpmFut5SgI0LZq0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1090277477598</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>gestur</string>
+	<key>PROJECT_ID</key>
+	<string>gestur-1db5f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gestur-1db5f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1090277477598:ios:74d475c255936882</string>
+	<key>DATABASE_URL</key>
+	<string>https://gestur-1db5f.firebaseio.com</string>
+</dict>
+</plist>
