@@ -191,6 +191,7 @@ class cameraController: UIViewController,ARSCNViewDelegate {
                 if (topPredictionName == "FIST") { symbol = "Zero" }
                 if (topPredictionName == "PALM") { symbol = "Five" }
                 if (topPredictionName == "FINGER") { symbol = "One" }
+                if (topPredictionName == "TWO") { symbol = "Two" }
             }
             self.textOut.text = symbol
             if(symbol != ""){
