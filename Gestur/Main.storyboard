@@ -237,7 +237,6 @@
         <!--Log In Controller-->
         <scene sceneID="l2q-4S-QOb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KZF-5R-vO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="crossDissolve" id="2MN-u4-J4W" customClass="logInController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="csx-zV-8hu"/>
@@ -362,6 +361,7 @@
                         <outlet property="txtPassword" destination="lT9-um-FH5" id="hsq-yR-fXK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZF-5R-vO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032.8" y="101.19940029985008"/>
         </scene>
