@@ -15,10 +15,44 @@ import QuartzCore
 
 
 class cameraController: UIViewController,ARSCNViewDelegate {
-
+    @IBAction func cameraButtonClicked(_ sender: UIBarButtonItem) {
+    }
+    
+    var tempSymbol:String = ""
+    var translationArray:[String] = []
+    {
+        didSet {
+            let resetArray:[String] = []
+            var bool = true
+            
+            if(translationArray.count >= 5){
+                for i in stride(from: 0, to: 5, by: 1){
+                    if (translationArray[i] != translationArray[0]){
+                        bool = false
+                    }
+                }
+                
+                if (bool == true){
+                    if (tempSymbol==""){
+                        lblTranslation.text = lblTranslation.text! + " " + translationArray[0]
+                        tempSymbol = translationArray[0]
+                    }
+                    if((tempSymbol != translationArray[0]) && tempSymbol != ""){
+                        lblTranslation.text = lblTranslation.text! + " " + translationArray[0]
+                        tempSymbol = translationArray[0]
+                    }
+                    
+                }
+                translationArray = resetArray
+            }
+        }
+    }
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textOut: UILabel!
-    
+    @IBOutlet var lblTranslation: UILabel!
+    @IBAction func dismissView(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion:nil)
+    }
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     var visionRequests = [VNRequest]()
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -26,10 +60,14 @@ class cameraController: UIViewController,ARSCNViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblTranslation.text = "Translation: "
         let customColor = UIColor(red:51/255, green:140/255, blue:133/255, alpha:1.0)
         textOut.layer.backgroundColor  = customColor.cgColor
         textOut.layer.cornerRadius = 8
         textOut.alpha = 0.7
+        
+        lblTranslation.layer.backgroundColor  = customColor.cgColor
+        lblTranslation.alpha = 0.7
         
         // --- ARKIT ---
         
@@ -139,24 +177,25 @@ class cameraController: UIViewController,ARSCNViewDelegate {
         
         // Render Classifications
         DispatchQueue.main.async {
-            // Print Classifications
-            // print(classifications)
-            // print("-------------")
             
             // Display Top Symbol
             var symbol = ""
             let topPrediction = classifications.components(separatedBy: "\n")[0]
             let topPredictionName = topPrediction.components(separatedBy: ":")[0].trimmingCharacters(in: .whitespaces)
-            // Only display a prediction if confidence is above 1%
             let topPredictionScore:Float? = Float(topPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
-            if (topPredictionScore != nil && topPredictionScore! > 0.01) {
+
+            let secondPrediction = classifications.components(separatedBy: "\n")[1]
+            let secondPredictionScore:Float? = Float(secondPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
+            // Only display a prediction if confidence is above 20% && top prediction is 5% more confident than second one
+            if (topPredictionScore != nil && topPredictionScore! > 0.20 && (topPredictionScore! - secondPredictionScore!) > 0.05) {
                 if (topPredictionName == "FIST") { symbol = "Zero" }
                 if (topPredictionName == "PALM") { symbol = "Five" }
                 if (topPredictionName == "FINGER") { symbol = "One" }
             }
-            
             self.textOut.text = symbol
-            
+            if(symbol != ""){
+                self.translationArray.append(symbol)
+            }
         }
     }
 }
