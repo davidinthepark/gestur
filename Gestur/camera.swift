@@ -187,10 +187,10 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             let secondPrediction = classifications.components(separatedBy: "\n")[1]
             let secondPredictionScore:Float? = Float(secondPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
             // Only display a prediction if confidence is above 20% && top prediction is 5% more confident than second one
-            if (topPredictionScore != nil && topPredictionScore! > 0.20 && (topPredictionScore! - secondPredictionScore!) > 0.05) {
+            if (topPredictionScore != nil && topPredictionScore! > 0.01) {
                 if (topPredictionName == "FIST") { symbol = "Zero" }
                 if (topPredictionName == "PALM") { symbol = "Five" }
-                if (topPredictionName == "FINGER") { symbol = "One" }
+                if (topPredictionName == "ONE") { symbol = "One" }
                 if (topPredictionName == "TWO") { symbol = "Two" }
             }
             self.textOut.text = symbol
