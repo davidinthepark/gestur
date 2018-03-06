@@ -22,6 +22,7 @@
 		52C6EAA01FB29ED00001E729 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EA9F1FB29ED00001E729 /* UIKit.framework */; };
 		52C6EAA21FB29EEB0001E729 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EAA11FB29EEB0001E729 /* Foundation.framework */; };
 		F2DC3F9948CCB781346409C5 /* Pods_Gestur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF4C5E38B25F86EB56DDE /* Pods_Gestur.framework */; };
+		FF2D4C32204EA9E900D90BE1 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2D4C31204EA9E900D90BE1 /* Animator.swift */; };
 		FFDB886F1FD06F4300227921 /* Gestur Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FFDB886E1FD06F4300227921 /* Gestur Logo.png */; };
 		FFE65FB81FD071A700D7ECF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE65FB71FD071A700D7ECF5 /* Main.storyboard */; };
 		FFED23AF1FDEDC530011D3EB /* v1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFED23AE1FDEDC530011D3EB /* v1.mlmodel */; };
@@ -47,6 +48,7 @@
 		52C6EAA11FB29EEB0001E729 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A96B30FBEEE8047100744C2D /* Pods-Gestur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.debug.xcconfig"; sourceTree = "<group>"; };
 		F53E324020462821D511EC2F /* Pods-Gestur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.release.xcconfig"; sourceTree = "<group>"; };
+		FF2D4C31204EA9E900D90BE1 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = /Users/davidpark/Documents/GitHub/gestur/Gestur/Animator.swift; sourceTree = "<absolute>"; };
 		FFDB886E1FD06F4300227921 /* Gestur Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestur Logo.png"; sourceTree = "<group>"; };
 		FFE65FB71FD071A700D7ECF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FFED23AE1FDEDC530011D3EB /* v1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v1.mlmodel; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		52C6EA6B1FA82B730001E729 /* Gestur */ = {
 			isa = PBXGroup;
 			children = (
+				FF2D4C31204EA9E900D90BE1 /* Animator.swift */,
 				FFDB886E1FD06F4300227921 /* Gestur Logo.png */,
 				52C6EA831FA842560001E729 /* GESTUR.png */,
 				52C6EA6C1FA82B730001E729 /* AppDelegate.swift */,
@@ -162,7 +165,7 @@
 				TargetAttributes = {
 					52C6EA681FA82B730001E729 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = JJ9S6U4NC3;
+						DevelopmentTeam = ZZ698KZ5HN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -268,6 +271,7 @@
 				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
 				52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */,
+				FF2D4C32204EA9E900D90BE1 /* Animator.swift in Sources */,
 				52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */,
 				52C6EA8E1FB232E80001E729 /* camera.swift in Sources */,
 			);
@@ -388,7 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JJ9S6U4NC3;
+				DEVELOPMENT_TEAM = ZZ698KZ5HN;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -405,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JJ9S6U4NC3;
+				DEVELOPMENT_TEAM = ZZ698KZ5HN;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

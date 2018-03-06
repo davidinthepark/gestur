@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/davidpark/Documents/GitHub/gestur/Gestur/Animator.swift">
+   </FileRef>
+   <FileRef
       location = "group:Gestur.xcodeproj">
    </FileRef>
    <FileRef

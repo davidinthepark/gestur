@@ -13,6 +13,7 @@ import Firebase
 
 class mainController: UIViewController {
 
+    let animator = Animator()
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -36,6 +37,12 @@ class mainController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "setting") as UIViewController
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        
+        destination.transitioningDelegate = animator
     }
 
 }
