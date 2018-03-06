@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Foundation
+import FirebaseAuth
+import Firebase
 
 class mainController: UIViewController {
 
@@ -16,6 +19,11 @@ class mainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.ifLoggedInSwitch()
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,7 +31,12 @@ class mainController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func ifLoggedInSwitch() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "setting") as UIViewController
+        self.present(controller, animated: true, completion: nil)
+    }
 
 }
 

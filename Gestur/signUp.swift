@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth 
+import FirebaseAuth
+import Firebase
+
 class signUpController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -25,9 +27,11 @@ class signUpController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet var txtEmail: UITextField!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var lblStatus: UILabel!
+    
     
     @IBAction func CreateUser(_ sender: UIButton) {
         self.view.endEditing(true)
@@ -39,10 +43,9 @@ class signUpController: UIViewController {
                 self.lblStatus.text = error.localizedDescription
             }
             else if let user = user {
-                print(user)
-
+            Database.database().reference().child("users").child(user.uid).setValue(["username": self.txtUserName.text])
+                
                 let setting = self.storyboard?.instantiateViewController(withIdentifier: "setting") as! detailController
-                setting.userEmail = user.email
                 self.present(setting, animated: true)
             }
         }
