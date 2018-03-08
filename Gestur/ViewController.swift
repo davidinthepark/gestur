@@ -41,8 +41,10 @@ class mainController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
+        //let source = segue.source
         
         destination.transitioningDelegate = animator
+        //source.transitioningDelegate = animator
     }
 
 }

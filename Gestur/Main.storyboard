@@ -17,7 +17,7 @@
         <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="mainController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="mainController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E4D-Ow-Zdb"/>
                         <viewControllerLayoutGuide type="bottom" id="Kzt-fU-Bo2"/>
@@ -103,6 +103,7 @@
                             <constraint firstItem="pQ1-fC-pH8" firstAttribute="top" secondItem="3Pl-kl-EZf" secondAttribute="bottom" constant="13" id="sbf-pe-iiA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Pue-IG-kKM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +112,7 @@
         <!--Sign Up Controller-->
         <scene sceneID="Hb2-Jy-gYf">
             <objects>
-                <viewController storyboardIdentifier="signUpController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DOU-E5-G6L" customClass="signUpController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DOU-E5-G6L" customClass="signUpController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oPw-lB-JWK"/>
                         <viewControllerLayoutGuide type="bottom" id="YeP-Uj-mYa"/>
@@ -187,7 +188,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="H3U-Jb-sPX">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="Sog-ef-o7a"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="nby-Pb-vsc"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -257,7 +258,7 @@
         <!--Log In Controller-->
         <scene sceneID="l2q-4S-QOb">
             <objects>
-                <viewController storyboardIdentifier="loginController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2MN-u4-J4W" customClass="logInController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2MN-u4-J4W" customClass="logInController" customModule="Gestur" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="csx-zV-8hu"/>
                         <viewControllerLayoutGuide type="bottom" id="Ej2-vY-XfW"/>
@@ -296,7 +297,7 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GTj-0i-seo">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="UmT-eX-r99"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="Vjj-ls-tqX"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -748,6 +749,6 @@
         <image name="Gestur Logo.png" width="1740" height="1740"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UmT-eX-r99"/>
+        <segue reference="Vjj-ls-tqX"/>
     </inferredMetricsTieBreakers>
 </document>
