@@ -86,7 +86,7 @@ class cameraController: UIViewController,ARSCNViewDelegate {
         // --- ML & VISION ---
         
         // Setup Vision Model
-        guard let selectedModel = try? VNCoreMLModel(for: v1().model) else {
+        guard let selectedModel = try? VNCoreMLModel(for: v2().model) else {
             fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project. Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
         }
         
@@ -188,10 +188,11 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             let secondPredictionScore:Float? = Float(secondPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
             // Only display a prediction if confidence is above 20% && top prediction is 5% more confident than second one
             if (topPredictionScore != nil && topPredictionScore! > 0.01) {
-                if (topPredictionName == "FIST") { symbol = "Zero" }
-                if (topPredictionName == "PALM") { symbol = "Five" }
-                if (topPredictionName == "ONE") { symbol = "One" }
-                if (topPredictionName == "TWO") { symbol = "Two" }
+                if (topPredictionName == "ARE") { symbol = "are" }
+                if (topPredictionName == "BG") { symbol = "" }
+                if (topPredictionName == "HELLO") { symbol = "hello" }
+                if (topPredictionName == "HOW") { symbol = "how" }
+                if (topPredictionName == "YOU") { symbol = "you" }
             }
             self.textOut.text = symbol
             if(symbol != ""){

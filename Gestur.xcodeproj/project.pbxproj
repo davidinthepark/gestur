@@ -26,6 +26,7 @@
 		FFDB886F1FD06F4300227921 /* Gestur Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FFDB886E1FD06F4300227921 /* Gestur Logo.png */; };
 		FFE65FB81FD071A700D7ECF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE65FB71FD071A700D7ECF5 /* Main.storyboard */; };
 		FFED23AF1FDEDC530011D3EB /* v1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFED23AE1FDEDC530011D3EB /* v1.mlmodel */; };
+		FFFCC0D920638B9D0019BFDD /* v2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFFCC0D820638B9D0019BFDD /* v2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FFDB886E1FD06F4300227921 /* Gestur Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestur Logo.png"; sourceTree = "<group>"; };
 		FFE65FB71FD071A700D7ECF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FFED23AE1FDEDC530011D3EB /* v1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v1.mlmodel; sourceTree = "<group>"; };
+		FFFCC0D820638B9D0019BFDD /* v2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		52C6EA6B1FA82B730001E729 /* Gestur */ = {
 			isa = PBXGroup;
 			children = (
+				FFFCC0D820638B9D0019BFDD /* v2.mlmodel */,
 				FF2D4C31204EA9E900D90BE1 /* Animator.swift */,
 				FFDB886E1FD06F4300227921 /* Gestur Logo.png */,
 				52C6EA831FA842560001E729 /* GESTUR.png */,
@@ -267,6 +270,7 @@
 			files = (
 				52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */,
 				FFED23AF1FDEDC530011D3EB /* v1.mlmodel in Sources */,
+				FFFCC0D920638B9D0019BFDD /* v2.mlmodel in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
 				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
