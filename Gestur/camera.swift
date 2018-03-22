@@ -47,6 +47,21 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             }
         }
     }
+    
+    @IBAction func clearButtonClicked(_ sender: UIButton) {
+        lblTranslation.text = "Translation: "
+        self.translationArray = []
+    }
+
+    
+    @IBAction func copyButtonClicked(_ sender: UIButton) {
+        UIPasteboard.general.string = lblTranslation.text?.substring(from: (lblTranslation.text?.index((lblTranslation.text?.startIndex)!, offsetBy: 13))!)
+        let alert = UIAlertController(title: "Message Copied", message: "The message has been copied to your clipboard", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textOut: UILabel!
     @IBOutlet var lblTranslation: UILabel!
