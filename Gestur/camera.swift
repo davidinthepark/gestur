@@ -152,7 +152,9 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             // 1. Run Update.
             self.updateCoreML()
             // 2. Loop this function.
-            self.loopCoreMLUpdate()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                self.loopCoreMLUpdate()
+            })
         }
     }
     
