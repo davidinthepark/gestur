@@ -22,7 +22,6 @@ class detailController: UIViewController {
     @IBOutlet weak var fourSixPack: UIButton!
     @IBOutlet weak var sevenNinePack: UIButton!
     @IBOutlet var settingTitle: UINavigationBar!
-    @IBOutlet var CameraButton: UIBarButtonItem!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -148,7 +147,6 @@ class detailController: UIViewController {
     func EnglishClicked() {
         ChineseButton.setTitle("Chinese/中文", for: .normal)
         EnglishButton.setTitle("English", for: .normal)
-        CameraButton.title="Camera"
         settingTitle.topItem?.title = "Setting"
         lblAccount.text = "Account"
         lblPayment.text = "Payment"
@@ -160,7 +158,6 @@ class detailController: UIViewController {
     func ChineseClicked() {
         ChineseButton.setTitle("简体中文/Simplified Chinese", for: .normal)
         EnglishButton.setTitle("英文／English", for: .normal)
-        CameraButton.title="相机"
         settingTitle.topItem?.title = "设置"
         lblAccount.text = "账户"
         lblPayment.text = "支付"

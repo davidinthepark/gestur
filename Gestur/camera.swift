@@ -152,7 +152,7 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             // 1. Run Update.
             self.updateCoreML()
             // 2. Loop this function.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
                 self.loopCoreMLUpdate()
             })
         }
@@ -204,7 +204,7 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             let secondPrediction = classifications.components(separatedBy: "\n")[1]
             let secondPredictionScore:Float? = Float(secondPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
             // Only display a prediction if confidence is above 20% && top prediction is 5% more confident than second one
-            if (topPredictionScore != nil && topPredictionScore! > 0.01) {
+            if (topPredictionScore != nil && topPredictionScore! > 0.08) {
                 if (topPredictionName == "ARE") { symbol = "are" }
                 if (topPredictionName == "BG") { symbol = "" }
                 if (topPredictionName == "HELLO") { symbol = "hello" }

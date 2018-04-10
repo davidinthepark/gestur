@@ -53,9 +53,9 @@ class logInController: UIViewController {
             }
             else if let user = user {
                 print(user)
-                let setting = self.storyboard?.instantiateViewController(withIdentifier: "setting") as! detailController
-                setting.userEmail = user.email
-                self.present(setting, animated: true)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "welcome") as UIViewController
+                self.present(controller, animated: true, completion: nil)
             }
         }
     }
