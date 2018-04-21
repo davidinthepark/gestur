@@ -47,6 +47,7 @@ class detailController: UIViewController {
             }
         }
     }
+    
     @IBAction func logOutClicked(_ sender: UIButton) {
         try! Auth.auth().signOut()
         self.switchStoryboard()
