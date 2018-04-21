@@ -23,6 +23,7 @@
 		52C6EAA01FB29ED00001E729 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EA9F1FB29ED00001E729 /* UIKit.framework */; };
 		52C6EAA21FB29EEB0001E729 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6EAA11FB29EEB0001E729 /* Foundation.framework */; };
 		627CDEE8208B358D0001DACC /* settingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CDEE7208B358D0001DACC /* settingsTableViewController.swift */; };
+		627CDEEC208B4B9F0001DACC /* chineseSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CDEEB208B4B9F0001DACC /* chineseSettingsTableViewController.swift */; };
 		F2DC3F9948CCB781346409C5 /* Pods_Gestur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF4C5E38B25F86EB56DDE /* Pods_Gestur.framework */; };
 		FF8FF733207CC49000F479C7 /* welcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8FF732207CC49000F479C7 /* welcomeController.swift */; };
 		FFDAAE52207C8F3100D93130 /* v2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFDAAE51207C8F3100D93130 /* v2.mlmodel */; };
@@ -51,6 +52,7 @@
 		52C6EA9F1FB29ED00001E729 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		52C6EAA11FB29EEB0001E729 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		627CDEE7208B358D0001DACC /* settingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsTableViewController.swift; sourceTree = "<group>"; };
+		627CDEEB208B4B9F0001DACC /* chineseSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chineseSettingsTableViewController.swift; sourceTree = "<group>"; };
 		A96B30FBEEE8047100744C2D /* Pods-Gestur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.debug.xcconfig"; sourceTree = "<group>"; };
 		F53E324020462821D511EC2F /* Pods-Gestur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.release.xcconfig"; sourceTree = "<group>"; };
 		FF8FF732207CC49000F479C7 /* welcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				FFED23AE1FDEDC530011D3EB /* v1.mlmodel */,
 				FF8FF732207CC49000F479C7 /* welcomeController.swift */,
 				627CDEE7208B358D0001DACC /* settingsTableViewController.swift */,
+				627CDEEB208B4B9F0001DACC /* chineseSettingsTableViewController.swift */,
 			);
 			path = Gestur;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
 				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
+				627CDEEC208B4B9F0001DACC /* chineseSettingsTableViewController.swift in Sources */,
 				52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */,
 				627CDEE8208B358D0001DACC /* settingsTableViewController.swift in Sources */,
 				52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */,

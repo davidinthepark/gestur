@@ -1,5 +1,5 @@
 //
-//  settingsTableViewController.swift
+//  chineseSettingsTableViewController.swift
 //  Gestur
 //
 //  Created by jxsonl on 4/21/18.
@@ -10,21 +10,21 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class settingsTableViewController: UITableViewController {
+class chineseSettingsTableViewController: UITableViewController {
+
+    @IBOutlet weak var chineseAccountEmail: UILabel!
+    @IBOutlet weak var chineseAccountUserName: UILabel!
     
-    @IBOutlet weak var newAccountEmail: UILabel!
-    @IBOutlet weak var newAccountUserName: UILabel!
-    
-    @IBAction func newChangePasswordClicked(_ sender: UIButton) {
+    @IBAction func chineseChangePasswordClicked(_ sender: UIButton) {
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
                 Auth.auth().sendPasswordReset(withEmail: (user?.email)!) { error in
                 }
-                let alert = UIAlertController(title: "Change Password", message: "Are you sure you want to change your password?", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Default action"), style: .`default`, handler: { _ in
+                let alert = UIAlertController(title: "重设密码", message: "您确定要更改密码吗？", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("取消", comment: "Default action"), style: .`default`, handler: { _ in
                 }))
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Default action"), style: .`cancel`, handler: { _ in
-                    let alert = UIAlertController(title: "Change Password", message: "Changing password email has been sent to your email address.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("是", comment: "Default action"), style: .`cancel`, handler: { _ in
+                    let alert = UIAlertController(title: "Change Password", message: "请查看您的电子邮件以获取更多指导", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
                     }))
                     self.present(alert, animated: true, completion: nil)
@@ -36,17 +36,23 @@ class settingsTableViewController: UITableViewController {
         }
     }
     
+    func switchStoryboard() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "mainController") as UIViewController
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
-                self.newAccountEmail.text = user?.email
+                self.chineseAccountEmail.text = user?.email
                 Database.database().reference().child("users").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
                     // Get user value
                     let value = snapshot.value as? NSDictionary
                     let username = value?["username"] as? String ?? ""
-                    self.newAccountUserName.text = username
+                    self.chineseAccountUserName.text = username
                     // ...
                 }) { (error) in
                     print(error.localizedDescription)
@@ -55,41 +61,28 @@ class settingsTableViewController: UITableViewController {
                 self.switchStoryboard()
             }
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    func switchStoryboard() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "mainController") as UIViewController
-        self.present(controller, animated: true, completion: nil)
     }
     
-    
-    @IBAction func languagePackX(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Purchase Language Pack", message: "We are working it!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Purchase", comment: "Default action"), style: .`default`, handler: { _ in
+    @IBAction func chineseLanguagePack1(_ sender: UIButton) {
+        let alert = UIAlertController(title: "购买语言", message: "正在施工", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("购买", comment: "Default action"), style: .`default`, handler: { _ in
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Default action"), style: .`default`, handler: { _ in
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func languagePackY(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Purchase Language Pack", message: "We are working it!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Purchase", comment: "Default action"), style: .`default`, handler: { _ in
-        }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Default action"), style: .`default`, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("取消", comment: "Default action"), style: .`default`, handler: { _ in
         }))
         self.present(alert, animated: true, completion: nil)
     }
     
     
-    @IBAction func logOutClicked(_ sender: UIButton) {
+    @IBAction func chineseLanguagePack2(_ sender: UIButton) {
+        let alert = UIAlertController(title: "购买语言", message: "正在施工", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("购买", comment: "Default action"), style: .`default`, handler: { _ in
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("取消", comment: "Default action"), style: .`default`, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func chineseLogOut(_ sender: UIButton) {
         try! Auth.auth().signOut()
         self.switchStoryboard()
     }
