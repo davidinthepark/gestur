@@ -176,7 +176,7 @@
 				TargetAttributes = {
 					52C6EA681FA82B730001E729 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = ZZ698KZ5HN;
+						DevelopmentTeam = JJ9S6U4NC3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -398,7 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZZ698KZ5HN;
+				DEVELOPMENT_TEAM = JJ9S6U4NC3;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZZ698KZ5HN;
+				DEVELOPMENT_TEAM = JJ9S6U4NC3;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

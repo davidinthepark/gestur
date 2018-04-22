@@ -35,7 +35,7 @@ class mainController: UIViewController {
     
     func ifLoggedInSwitch() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "setting") as UIViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "welcome") as! welcomeController
         self.present(controller, animated: true, completion: nil)
     }
     

@@ -43,10 +43,19 @@ class signUpController: UIViewController {
                 self.lblStatus.text = error.localizedDescription
             }
             else if let user = user {
-            Database.database().reference().child("users").child(user.uid).setValue(["username": self.txtUserName.text])
                 
-                let setting = self.storyboard?.instantiateViewController(withIdentifier: "setting") as! detailController
+                Database.database().reference().child("users").child(user.uid).setValue(["username": self.txtUserName.text])
+                
+                if user.isEmailVerified == false{
+                    Auth.auth().currentUser?.sendEmailVerification { (error) in
+                        self.lblStatus.isHidden = false
+                        self.lblStatus.text = error?.localizedDescription
+                    };
+                }
+                
+                let setting = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! welcomeController
                 self.present(setting, animated: true)
+                
             }
         }
     }
