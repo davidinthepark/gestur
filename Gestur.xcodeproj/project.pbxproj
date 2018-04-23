@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		520B655A206399AA00887B02 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B6559206399A900887B02 /* Animator.swift */; };
+		52865321208D75E3003DEEBB /* textToImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52865320208D75E3003DEEBB /* textToImageViewController.swift */; };
+		52865324208D893D003DEEBB /* HELLO.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52865323208D893C003DEEBB /* HELLO.JPG */; };
+		52865326208D8946003DEEBB /* HOW.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52865325208D8946003DEEBB /* HOW.JPG */; };
+		52865328208D894F003DEEBB /* ARE.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52865327208D894F003DEEBB /* ARE.JPG */; };
+		5286532A208D8956003DEEBB /* YOU.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52865329208D8956003DEEBB /* YOU.JPG */; };
 		528754011FDDBF5600C331D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 528754001FDDBF5600C331D0 /* GoogleService-Info.plist */; };
 		52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA6C1FA82B730001E729 /* AppDelegate.swift */; };
 		52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA6E1FA82B730001E729 /* ViewController.swift */; };
 		52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA731FA82B730001E729 /* Gestur.xcdatamodeld */; };
 		52C6EA771FA82B730001E729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA761FA82B730001E729 /* Assets.xcassets */; };
 		52C6EA7A1FA82B730001E729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA781FA82B730001E729 /* LaunchScreen.storyboard */; };
-		52C6EA841FA842560001E729 /* GESTUR.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA831FA842560001E729 /* GESTUR.png */; };
+		52C6EA841FA842560001E729 /* GESTUR.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 52C6EA831FA842560001E729 /* GESTUR.PNG */; };
 		52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA891FB232A30001E729 /* logIn.swift */; };
 		52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8B1FB232B10001E729 /* signUp.swift */; };
 		52C6EA8E1FB232E80001E729 /* camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6EA8D1FB232E80001E729 /* camera.swift */; };
@@ -35,6 +40,11 @@
 /* Begin PBXFileReference section */
 		4CCBF4C5E38B25F86EB56DDE /* Pods_Gestur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gestur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		520B6559206399A900887B02 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		52865320208D75E3003DEEBB /* textToImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textToImageViewController.swift; sourceTree = "<group>"; };
+		52865323208D893C003DEEBB /* HELLO.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HELLO.JPG; sourceTree = "<group>"; };
+		52865325208D8946003DEEBB /* HOW.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HOW.JPG; sourceTree = "<group>"; };
+		52865327208D894F003DEEBB /* ARE.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ARE.JPG; sourceTree = "<group>"; };
+		52865329208D8956003DEEBB /* YOU.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YOU.JPG; sourceTree = "<group>"; };
 		528754001FDDBF5600C331D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52C6EA691FA82B730001E729 /* Gestur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C6EA6C1FA82B730001E729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +53,7 @@
 		52C6EA761FA82B730001E729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C6EA791FA82B730001E729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C6EA7B1FA82B730001E729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52C6EA831FA842560001E729 /* GESTUR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GESTUR.png; sourceTree = "<group>"; };
+		52C6EA831FA842560001E729 /* GESTUR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GESTUR.PNG; sourceTree = "<group>"; };
 		52C6EA891FB232A30001E729 /* logIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logIn.swift; sourceTree = "<group>"; };
 		52C6EA8B1FB232B10001E729 /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		52C6EA8D1FB232E80001E729 /* camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = camera.swift; sourceTree = "<group>"; };
@@ -86,9 +96,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		52865322208D892A003DEEBB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				52865323208D893C003DEEBB /* HELLO.JPG */,
+				52865325208D8946003DEEBB /* HOW.JPG */,
+				52865327208D894F003DEEBB /* ARE.JPG */,
+				52865329208D8956003DEEBB /* YOU.JPG */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		52C6EA601FA82B730001E729 = {
 			isa = PBXGroup;
 			children = (
+				52865322208D892A003DEEBB /* Images */,
 				52C6EA6B1FA82B730001E729 /* Gestur */,
 				52C6EA6A1FA82B730001E729 /* Products */,
 				52C6EA9C1FB29EC80001E729 /* Frameworks */,
@@ -110,7 +132,7 @@
 				520B6559206399A900887B02 /* Animator.swift */,
 				FFDAAE51207C8F3100D93130 /* v2.mlmodel */,
 				FFDB886E1FD06F4300227921 /* Gestur Logo.png */,
-				52C6EA831FA842560001E729 /* GESTUR.png */,
+				52C6EA831FA842560001E729 /* GESTUR.PNG */,
 				52C6EA6C1FA82B730001E729 /* AppDelegate.swift */,
 				52C6EA6E1FA82B730001E729 /* ViewController.swift */,
 				FFE65FB71FD071A700D7ECF5 /* Main.storyboard */,
@@ -127,6 +149,7 @@
 				FF8FF732207CC49000F479C7 /* welcomeController.swift */,
 				627CDEE7208B358D0001DACC /* settingsTableViewController.swift */,
 				627CDEEB208B4B9F0001DACC /* chineseSettingsTableViewController.swift */,
+				52865320208D75E3003DEEBB /* textToImageViewController.swift */,
 			);
 			path = Gestur;
 			sourceTree = "<group>";
@@ -154,6 +177,7 @@
 				52C6EA661FA82B730001E729 /* Frameworks */,
 				52C6EA671FA82B730001E729 /* Resources */,
 				1FE7C5EDD929108BB6E6A193 /* [CP] Embed Pods Frameworks */,
+				11CE7FA6EE32FBA312E1CB76 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,10 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE65FB81FD071A700D7ECF5 /* Main.storyboard in Resources */,
+				5286532A208D8956003DEEBB /* YOU.JPG in Resources */,
 				52C6EA7A1FA82B730001E729 /* LaunchScreen.storyboard in Resources */,
+				52865324208D893D003DEEBB /* HELLO.JPG in Resources */,
 				FFDB886F1FD06F4300227921 /* Gestur Logo.png in Resources */,
+				52865326208D8946003DEEBB /* HOW.JPG in Resources */,
 				52C6EA771FA82B730001E729 /* Assets.xcassets in Resources */,
-				52C6EA841FA842560001E729 /* GESTUR.png in Resources */,
+				52865328208D894F003DEEBB /* ARE.JPG in Resources */,
+				52C6EA841FA842560001E729 /* GESTUR.PNG in Resources */,
 				528754011FDDBF5600C331D0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +244,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11CE7FA6EE32FBA312E1CB76 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gestur/Pods-Gestur-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1FE7C5EDD929108BB6E6A193 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,7 +300,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -269,6 +312,7 @@
 			files = (
 				52C6EA8C1FB232B10001E729 /* signUp.swift in Sources */,
 				FF8FF733207CC49000F479C7 /* welcomeController.swift in Sources */,
+				52865321208D75E3003DEEBB /* textToImageViewController.swift in Sources */,
 				FFED23AF1FDEDC530011D3EB /* v1.mlmodel in Sources */,
 				FFDAAE52207C8F3100D93130 /* v2.mlmodel in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
