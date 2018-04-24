@@ -31,6 +31,8 @@
 		627CDEEC208B4B9F0001DACC /* chineseSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CDEEB208B4B9F0001DACC /* chineseSettingsTableViewController.swift */; };
 		F2DC3F9948CCB781346409C5 /* Pods_Gestur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF4C5E38B25F86EB56DDE /* Pods_Gestur.framework */; };
 		FF8FF733207CC49000F479C7 /* welcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8FF732207CC49000F479C7 /* welcomeController.swift */; };
+		FFAE8B5B208F90AD00A1A931 /* v3beta.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFAE8B5A208F90AD00A1A931 /* v3beta.mlmodel */; };
+		FFAE8B5D208F90C600A1A931 /* v3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFAE8B5C208F90C600A1A931 /* v3.mlmodel */; };
 		FFDAAE52207C8F3100D93130 /* v2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFDAAE51207C8F3100D93130 /* v2.mlmodel */; };
 		FFDB886F1FD06F4300227921 /* Gestur Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FFDB886E1FD06F4300227921 /* Gestur Logo.png */; };
 		FFE65FB81FD071A700D7ECF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE65FB71FD071A700D7ECF5 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		A96B30FBEEE8047100744C2D /* Pods-Gestur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.debug.xcconfig"; sourceTree = "<group>"; };
 		F53E324020462821D511EC2F /* Pods-Gestur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.release.xcconfig"; sourceTree = "<group>"; };
 		FF8FF732207CC49000F479C7 /* welcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeController.swift; sourceTree = "<group>"; };
+		FFAE8B5A208F90AD00A1A931 /* v3beta.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v3beta.mlmodel; sourceTree = "<group>"; };
+		FFAE8B5C208F90C600A1A931 /* v3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v3.mlmodel; sourceTree = "<group>"; };
 		FFDAAE51207C8F3100D93130 /* v2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v2.mlmodel; sourceTree = "<group>"; };
 		FFDB886E1FD06F4300227921 /* Gestur Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestur Logo.png"; sourceTree = "<group>"; };
 		FFE65FB71FD071A700D7ECF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -137,8 +141,10 @@
 				52C6EA6E1FA82B730001E729 /* ViewController.swift */,
 				FFE65FB71FD071A700D7ECF5 /* Main.storyboard */,
 				52C6EA761FA82B730001E729 /* Assets.xcassets */,
+				FFAE8B5A208F90AD00A1A931 /* v3beta.mlmodel */,
 				52C6EA781FA82B730001E729 /* LaunchScreen.storyboard */,
 				528754001FDDBF5600C331D0 /* GoogleService-Info.plist */,
+				FFAE8B5C208F90C600A1A931 /* v3.mlmodel */,
 				52C6EA7B1FA82B730001E729 /* Info.plist */,
 				52C6EA731FA82B730001E729 /* Gestur.xcdatamodeld */,
 				52C6EA891FB232A30001E729 /* logIn.swift */,
@@ -200,7 +206,7 @@
 				TargetAttributes = {
 					52C6EA681FA82B730001E729 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = JJ9S6U4NC3;
+						DevelopmentTeam = ZZ698KZ5HN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -314,12 +320,14 @@
 				FF8FF733207CC49000F479C7 /* welcomeController.swift in Sources */,
 				52865321208D75E3003DEEBB /* textToImageViewController.swift in Sources */,
 				FFED23AF1FDEDC530011D3EB /* v1.mlmodel in Sources */,
+				FFAE8B5B208F90AD00A1A931 /* v3beta.mlmodel in Sources */,
 				FFDAAE52207C8F3100D93130 /* v2.mlmodel in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
 				52C6EA901FB232F90001E729 /* detail.swift in Sources */,
 				52C6EA751FA82B730001E729 /* Gestur.xcdatamodeld in Sources */,
 				627CDEEC208B4B9F0001DACC /* chineseSettingsTableViewController.swift in Sources */,
 				52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */,
+				FFAE8B5D208F90C600A1A931 /* v3.mlmodel in Sources */,
 				627CDEE8208B358D0001DACC /* settingsTableViewController.swift in Sources */,
 				52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */,
 				520B655A206399AA00887B02 /* Animator.swift in Sources */,
@@ -442,7 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JJ9S6U4NC3;
+				DEVELOPMENT_TEAM = ZZ698KZ5HN;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -459,7 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JJ9S6U4NC3;
+				DEVELOPMENT_TEAM = ZZ698KZ5HN;
 				INFOPLIST_FILE = Gestur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
