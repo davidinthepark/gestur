@@ -101,7 +101,7 @@ class cameraController: UIViewController,ARSCNViewDelegate {
         // --- ML & VISION ---
         
         // Setup Vision Model
-        guard let selectedModel = try? VNCoreMLModel(for: v3().model) else {
+        guard let selectedModel = try? VNCoreMLModel(for: v4().model) else {
             fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project. Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
         }
         
@@ -205,16 +205,21 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             let secondPredictionScore:Float? = Float(secondPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
             // Only display a prediction if confidence is above 20% && top prediction is 5% more confident than second one
             if (topPredictionScore != nil && topPredictionScore! > 0.08) {
-                if (topPredictionName == "ARE") { symbol = "are" }
-                if (topPredictionName == "BG") { symbol = "" }
-                if (topPredictionName == "HELLO") { symbol = "hello" }
-                if (topPredictionName == "HOW") { symbol = "how" }
-                if (topPredictionName == "YOU") { symbol = "you" }
+//                if (topPredictionName == "ARE") { symbol = "are" }
+//                if (topPredictionName == "BG") { symbol = "" }
+//                if (topPredictionName == "HELLO") { symbol = "hello" }
+//                if (topPredictionName == "HOW") { symbol = "how" }
+//                if (topPredictionName == "YOU") { symbol = "you" }
 //                if (topPredictionName == "ARE_F") { symbol = "are" }
 //                if (topPredictionName == "BG_F") { symbol = "" }
 //                if (topPredictionName == "HELLO_F") { symbol = "hello" }
 //                if (topPredictionName == "HOW_F") { symbol = "how" }
 //                if (topPredictionName == "YOU_F") { symbol = "you" }
+                if (topPredictionName == "Are") { symbol = "are" }
+                if (topPredictionName == "Blank") { symbol = "" }
+                if (topPredictionName == "Hello") { symbol = "hello" }
+                if (topPredictionName == "How") { symbol = "how" }
+                if (topPredictionName == "You") { symbol = "you" }
             }
             self.textOut.text = symbol
             if(symbol != ""){
