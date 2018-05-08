@@ -25,8 +25,8 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             let resetArray:[String] = []
             var bool = true
             
-            if(translationArray.count >= 10){
-                for i in stride(from: 0, to: 10, by: 1){
+            if(translationArray.count >= 7){
+                for i in stride(from: 0, to: 7, by: 1){
                     if (translationArray[i] != translationArray[0]){
                         bool = false
                     }
@@ -101,7 +101,7 @@ class cameraController: UIViewController,ARSCNViewDelegate {
         // --- ML & VISION ---
         
         // Setup Vision Model
-        guard let selectedModel = try? VNCoreMLModel(for: v4().model) else {
+        guard let selectedModel = try? VNCoreMLModel(for: v4_2().model) else {
             fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project. Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
         }
         
@@ -200,26 +200,32 @@ class cameraController: UIViewController,ARSCNViewDelegate {
             let topPrediction = classifications.components(separatedBy: "\n")[0]
             let topPredictionName = topPrediction.components(separatedBy: ":")[0].trimmingCharacters(in: .whitespaces)
             let topPredictionScore:Float? = Float(topPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
-
+            
+            var prediction = NSString(format: "%.2f", topPredictionScore!)
+            
             let secondPrediction = classifications.components(separatedBy: "\n")[1]
             let secondPredictionScore:Float? = Float(secondPrediction.components(separatedBy: ":")[1].trimmingCharacters(in: .whitespaces))
             // Only display a prediction if confidence is above 20% && top prediction is 5% more confident than second one
-            if (topPredictionScore != nil && topPredictionScore! > 0.08) {
+            if (topPredictionScore != nil && topPredictionScore! > 0.05) {
 //                if (topPredictionName == "ARE") { symbol = "are" }
-//                if (topPredictionName == "BG") { symbol = "" }
+////                if (topPredictionName == "BG") { symbol = "" }
 //                if (topPredictionName == "HELLO") { symbol = "hello" }
 //                if (topPredictionName == "HOW") { symbol = "how" }
 //                if (topPredictionName == "YOU") { symbol = "you" }
+                //Including both
 //                if (topPredictionName == "ARE_F") { symbol = "are" }
-//                if (topPredictionName == "BG_F") { symbol = "" }
 //                if (topPredictionName == "HELLO_F") { symbol = "hello" }
 //                if (topPredictionName == "HOW_F") { symbol = "how" }
 //                if (topPredictionName == "YOU_F") { symbol = "you" }
-                if (topPredictionName == "Are") { symbol = "are" }
-                if (topPredictionName == "Blank") { symbol = "" }
-                if (topPredictionName == "Hello") { symbol = "hello" }
-                if (topPredictionName == "How") { symbol = "how" }
-                if (topPredictionName == "You") { symbol = "you" }
+                //TK's
+                if (topPredictionName == "Are") { symbol = "are"}
+                else if (topPredictionName == "Blank") { symbol = "" }
+                else if (topPredictionName == "Hello") { symbol = "hello" }
+                else if (topPredictionName == "How") { symbol = "how" }
+                else if (topPredictionName == "You") { symbol = "you" }
+                else { symbol = " " }
+                
+                
             }
             self.textOut.text = symbol
             if(symbol != ""){

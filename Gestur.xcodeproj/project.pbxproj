@@ -31,6 +31,8 @@
 		627CDEEC208B4B9F0001DACC /* chineseSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CDEEB208B4B9F0001DACC /* chineseSettingsTableViewController.swift */; };
 		F2DC3F9948CCB781346409C5 /* Pods_Gestur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCBF4C5E38B25F86EB56DDE /* Pods_Gestur.framework */; };
 		FF1E409C20A188EB003F9743 /* v4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF1E409B20A188EB003F9743 /* v4.mlmodel */; };
+		FF1E409E20A18B6C003F9743 /* v3_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF1E409D20A18B6C003F9743 /* v3_1.mlmodel */; };
+		FF1E40A420A19F36003F9743 /* v4_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF1E40A320A19F36003F9743 /* v4_2.mlmodel */; };
 		FF590F18209B0B5E00D9F79D /* v3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FF590F17209B0B5D00D9F79D /* v3.mlmodel */; };
 		FF8FF733207CC49000F479C7 /* welcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8FF732207CC49000F479C7 /* welcomeController.swift */; };
 		FFAE8B5B208F90AD00A1A931 /* v3beta.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FFAE8B5A208F90AD00A1A931 /* v3beta.mlmodel */; };
@@ -69,6 +71,8 @@
 		A96B30FBEEE8047100744C2D /* Pods-Gestur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.debug.xcconfig"; sourceTree = "<group>"; };
 		F53E324020462821D511EC2F /* Pods-Gestur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gestur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gestur/Pods-Gestur.release.xcconfig"; sourceTree = "<group>"; };
 		FF1E409B20A188EB003F9743 /* v4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v4.mlmodel; sourceTree = "<group>"; };
+		FF1E409D20A18B6C003F9743 /* v3_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v3_1.mlmodel; sourceTree = "<group>"; };
+		FF1E40A320A19F36003F9743 /* v4_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v4_2.mlmodel; sourceTree = "<group>"; };
 		FF590F17209B0B5D00D9F79D /* v3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v3.mlmodel; sourceTree = "<group>"; };
 		FF8FF732207CC49000F479C7 /* welcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeController.swift; sourceTree = "<group>"; };
 		FFAE8B5A208F90AD00A1A931 /* v3beta.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = v3beta.mlmodel; sourceTree = "<group>"; };
@@ -140,7 +144,9 @@
 				FFDAAE51207C8F3100D93130 /* v2.mlmodel */,
 				FFAE8B5A208F90AD00A1A931 /* v3beta.mlmodel */,
 				FF590F17209B0B5D00D9F79D /* v3.mlmodel */,
+				FF1E409D20A18B6C003F9743 /* v3_1.mlmodel */,
 				FF1E409B20A188EB003F9743 /* v4.mlmodel */,
+				FF1E40A320A19F36003F9743 /* v4_2.mlmodel */,
 				FFDB886E1FD06F4300227921 /* Gestur Logo.png */,
 				52C6EA831FA842560001E729 /* GESTUR.PNG */,
 				52C6EA6C1FA82B730001E729 /* AppDelegate.swift */,
@@ -324,6 +330,7 @@
 				FF1E409C20A188EB003F9743 /* v4.mlmodel in Sources */,
 				52865321208D75E3003DEEBB /* textToImageViewController.swift in Sources */,
 				FFED23AF1FDEDC530011D3EB /* v1.mlmodel in Sources */,
+				FF1E40A420A19F36003F9743 /* v4_2.mlmodel in Sources */,
 				FFAE8B5B208F90AD00A1A931 /* v3beta.mlmodel in Sources */,
 				FFDAAE52207C8F3100D93130 /* v2.mlmodel in Sources */,
 				52C6EA6F1FA82B730001E729 /* ViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				627CDEEC208B4B9F0001DACC /* chineseSettingsTableViewController.swift in Sources */,
 				52C6EA6D1FA82B730001E729 /* AppDelegate.swift in Sources */,
 				FF590F18209B0B5E00D9F79D /* v3.mlmodel in Sources */,
+				FF1E409E20A18B6C003F9743 /* v3_1.mlmodel in Sources */,
 				627CDEE8208B358D0001DACC /* settingsTableViewController.swift in Sources */,
 				52C6EA8A1FB232A30001E729 /* logIn.swift in Sources */,
 				520B655A206399AA00887B02 /* Animator.swift in Sources */,
