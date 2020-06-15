@@ -1,2 +1,2 @@
-# gestur
-Gestur iPhone app
+# Gestur
+Gestur App for iOS
